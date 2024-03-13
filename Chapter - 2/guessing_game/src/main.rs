@@ -3,21 +3,31 @@ use rand::Rng;
 use std::cmp::Ordering;
 fn main() {
     println!(" < ----- Welcome to the Guessing game ----- > ");
+    let random_number:u32 = rand::thread_rng().gen_range(1..=100);
     
-    println!(" please input your guess : ");
-    let random_number:i32 = rand::thread_rng().gen_range(1..=100);
-    println!(" Random number generated is {random_number}");
+    loop
+    {
+        println!(" please input your guess : ");
+        let mut guess = String::new();
+        println!(" : {guess} ");
+        io::stdin()
+            .read_line(&mut guess)
+            .expect("Failed to readlinr");
 
-    let mut guess = String::new();
-    println!(" : {guess} ");
-    io::stdin()
-        .read_line(&mut guess)
-        .expect("Failed to readlinr");
-    let guess:u32 = 
-    match  guess.cmp(&random_number) {
-        Ordering::Equal => print!("You win!"),
-        Ordering::Less => println!("Too small!"),
-        Ordering::Greater => println!("too Great!"),
+       
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
+
+        println!("you guessed {guess} ");
+        match guess.cmp(&random_number) {
+            Ordering::Equal =>{ 
+            print!("You win!");
+            break;
+            },
+            Ordering::Less => println!("Too small!"),
+            Ordering::Greater => println!("too Great!"),
+        };
     }
-    println!("you guessed this number :{guess} ");
 }

@@ -17,4 +17,20 @@ fn main() {
     }
 
     println!(" Result will be {result}");
+
+    let arr =[1,2,3,4,5];
+    let mut index:usize =0;   
+
+    while index <5{
+        println!("Value in index {index} is {} ",arr[index]);
+        index +=1;
+    }
+
+    for element in arr{
+        println!("{element}");
+    }
+
+    for i in (1..=32).rev(){
+        println!("{i}");
+    }
 }

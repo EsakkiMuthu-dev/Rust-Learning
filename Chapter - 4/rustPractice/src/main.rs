@@ -14,6 +14,8 @@ fn main() {
     let s2:String = String::from("Hey Bharathi !!");
     // make_string_copy(s2);
     // println!("The value of s is {s2}");
+    
+    //dsnjxnkjds
 
     let s :String = String::from("Hey Bharathi !!");
     let (s2,len)= calculate_string_length(s);

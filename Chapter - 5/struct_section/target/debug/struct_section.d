@@ -1,0 +1,1 @@
+/Users/esakki-20378/Documents/GitHub/Rust-Learning/Chapter\ -\ 5/struct_section/target/debug/struct_section: /Users/esakki-20378/Documents/GitHub/Rust-Learning/Chapter\ -\ 5/struct_section/src/main.rs

@@ -20,4 +20,13 @@ fn main() {
         *i+=10;
         println!("{i}");
     }
+    //Accessiong particular index
+    // let thrid : &i32 = &v[20];
+    // println!("third element is {thrid}");
+    
+    let thrid = match v.get(1798) {
+        Some(i) => i,
+        _=> & -1     
+    };
+    println!("third element is {thrid}"); 
 }

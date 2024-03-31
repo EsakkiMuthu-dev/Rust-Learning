@@ -1,3 +1,17 @@
+
+#[derive(Debug)]
+struct Point<T,U>{
+    x:T,
+    y:U
+}
+impl<S,U> Point<S,U> {
+    fn mixed<V,W>(self,other:Point<V,W>) -> Point<S,W>{
+         Point{
+             x: self.x, 
+             y:other.y}
+    }
+}
+
 fn main() {
     println!("Hello, world!");
     let vec_int = vec![1,2,3,4,5];
@@ -6,6 +20,13 @@ fn main() {
     println!("The largest in this vector is {:?}",find_largest_float(&vec_float));
     println!("The largest in this vector is {}",find_largest_any(vec_int));
     println!("The largest in this vector is {:?}",find_largest_any(vec_float));
+
+    let p = Point {x:1,y:3};
+    let p1 =Point{ x:"hello",y:'s'};
+    let p2 = p1.mixed(p);
+    println!("The Mixed Point is {:?}",p2);
+
+
 }
 
 fn find_largest_any<T: PartialOrd + Copy>(vec:Vec<T>) -> T{

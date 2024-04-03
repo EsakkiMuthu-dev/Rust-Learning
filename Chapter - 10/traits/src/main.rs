@@ -9,6 +9,8 @@ struct  Bird
     is_fly:bool
 }
 
+
+
 impl Eat for Bird {
     fn eating(&self) {
         println!("{}  is Eating now !",self.bird_type);

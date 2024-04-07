@@ -1,5 +1,6 @@
 pub mod helper;
 pub mod closures;
+pub mod matchtest;
 
 fn main() {
     println!("Hello, world!");

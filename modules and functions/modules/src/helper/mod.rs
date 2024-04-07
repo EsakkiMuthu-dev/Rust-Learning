@@ -7,7 +7,7 @@ pub mod sorry_word{
 }
 
 pub mod to_it_repeat{
-    pub fn ask_sorry_with_sorry_wrd(wrd:&String)
+pub fn ask_sorry_with_sorry_wrd(wrd:&String)
     {
         let mut counter:u8 =0;
         loop{

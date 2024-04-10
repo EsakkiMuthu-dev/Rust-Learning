@@ -1,4 +1,5 @@
 pub mod progrmming_lang;
+pub mod tratits;
 use progrmming_lang::{ProgrammingLanguage,Specailty};
 fn main() {
     let langs =vec!["Rust","Python","C","C++"];
@@ -8,6 +9,10 @@ fn main() {
     println!("After Changing Specaility: ");
     update_specaility(&mut prog_langs);
     pretty_print(&prog_langs);
+    let mut rust = ProgrammingLanguage::create_prog_lang("Rust".to_string(), "Graydon Hoare".to_string(), 2015);
+    rust.change_speciality(Specailty::SystemProgramming);
+    println!("{:?}",rust);
+    tratits::create_person();
 }
 
 fn create_prog_lang(langs: &Vec<&str>) -> Vec<ProgrammingLanguage>{

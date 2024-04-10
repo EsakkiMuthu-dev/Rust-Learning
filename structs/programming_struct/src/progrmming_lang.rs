@@ -12,7 +12,8 @@ pub enum Specailty{
     SystemProgramming,
     AllInAll,
     EnterpriseProgramming,
-    MotherOfALL
+    MotherOfALL,
+    Default
 }
 
 impl ProgrammingLanguage {
@@ -21,5 +22,8 @@ impl ProgrammingLanguage {
     }
     pub fn get_lang_name_with_author(&self) -> String{
         format!("{} {} ",self.name ,self.author)
+    }
+    pub fn create_prog_lang(name:String,author:String,year:u16) -> ProgrammingLanguage{
+        ProgrammingLanguage{name,author,year,specailty:Specailty::Default}
     }
 }

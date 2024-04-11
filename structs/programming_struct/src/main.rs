@@ -2,6 +2,7 @@ pub mod progrmming_lang;
 pub mod tratits;
 pub mod vec;
 pub mod myhashmap;
+pub mod iter;
 use progrmming_lang::{ProgrammingLanguage,Specailty};
 fn main() {
     let langs =vec!["Rust","Python","C","C++"];
@@ -17,6 +18,7 @@ fn main() {
     tratits::create_person();
     vec::test_vec_i32();
     myhashmap::test_map();
+    iter::test_iter();
 }
 
 fn create_prog_lang(langs: &Vec<&str>) -> Vec<ProgrammingLanguage>{

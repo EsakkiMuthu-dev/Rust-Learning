@@ -3,6 +3,7 @@ pub mod tratits;
 pub mod vec;
 pub mod myhashmap;
 pub mod iter;
+pub mod mydatetimd;
 use progrmming_lang::{ProgrammingLanguage,Specailty};
 fn main() {
     let langs =vec!["Rust","Python","C","C++"];
@@ -19,6 +20,7 @@ fn main() {
     vec::test_vec_i32();
     myhashmap::test_map();
     iter::test_iter();
+    mydatetimd::test_time();
 }
 
 fn create_prog_lang(langs: &Vec<&str>) -> Vec<ProgrammingLanguage>{

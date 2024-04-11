@@ -10,4 +10,8 @@ pub fn test_iter()
     {
         println!("{}",number);
     }
+
+    let some_expense_list = vec![("Random", 12),("Milk",2167), ("Diary milk",100)];
+    let total_expense:u32= some_expense_list.iter().fold(0u32, |a:u32,expense| a+expense.1);
+    println!("Expense  are : {:?}",total_expense);
 }

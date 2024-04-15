@@ -5,24 +5,29 @@ pub mod myhashmap;
 pub mod iter;
 pub mod mydatetimd;
 pub mod mymutex;
+pub mod mymscchannel;
+use std::{thread, time::Duration};
+
 use progrmming_lang::{ProgrammingLanguage,Specailty};
 fn main() {
-    let langs =vec!["Rust","Python","C","C++"];
-    let mut prog_langs:Vec<ProgrammingLanguage> = create_prog_lang(&langs);
-    println!("Before Changing Specaility: ");
-    pretty_print(&prog_langs);
-    println!("After Changing Specaility: ");
-    update_specaility(&mut prog_langs);
-    pretty_print(&prog_langs);
-    let mut rust = ProgrammingLanguage::create_prog_lang("Rust".to_string(), "Graydon Hoare".to_string(), 2015);
-    rust.change_speciality(Specailty::SystemProgramming);
-    println!("{:?}",rust);
-    tratits::create_person();
-    vec::test_vec_i32();
-    myhashmap::test_map();
-    iter::test_iter();
-    mydatetimd::test_time();
-    mymutex::test_mutex();
+    // let langs =vec!["Rust","Python","C","C++"];
+    // let mut prog_langs:Vec<ProgrammingLanguage> = create_prog_lang(&langs);
+    // println!("Before Changing Specaility: ");
+    // pretty_print(&prog_langs);
+    // println!("After Changing Specaility: ");
+    // update_specaility(&mut prog_langs);
+    // pretty_print(&prog_langs);
+    // let mut rust = ProgrammingLanguage::create_prog_lang("Rust".to_string(), "Graydon Hoare".to_string(), 2015);
+    // rust.change_speciality(Specailty::SystemProgramming);
+    // println!("{:?}",rust);
+    // tratits::create_person();
+    // vec::test_vec_i32();
+    // myhashmap::test_map();
+    // iter::test_iter();
+    // mydatetimd::test_time();
+    // mymutex::test_mutex();
+    mymscchannel::test_mpsc();
+    thread::sleep(Duration::from_secs(160));
 }
 
 fn create_prog_lang(langs: &Vec<&str>) -> Vec<ProgrammingLanguage>{

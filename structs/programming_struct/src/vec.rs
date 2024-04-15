@@ -1,4 +1,3 @@
-
 pub fn test_vec_i32(){
     let mut v:Vec<i32> = Vec::new();
     v.push(18);

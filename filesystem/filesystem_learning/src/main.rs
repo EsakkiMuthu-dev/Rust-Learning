@@ -1,5 +1,5 @@
-pub mod my_fs;
 pub mod my_args;
+pub mod my_fs;
 fn main() {
     println!("Hello, world!");
     my_fs::create_dir();

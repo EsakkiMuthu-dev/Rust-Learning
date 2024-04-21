@@ -6,4 +6,11 @@ fn main() {
     my_fs::create_file();
     my_fs::delete_all();
     my_args::get_from_args();
+    println!("{}",some().await);
+}
+
+async fn some()
+{
+    println!("hello");
+    await 0
 }

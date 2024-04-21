@@ -1,4 +1,4 @@
-workspace = { members = ["http_client", "operator_overloading"] }
+workspace = { members = [ "async-rust","http_client", "operator_overloading"] }
 [package]
 name = "Rust-Learning"
 version = "0.1.0"

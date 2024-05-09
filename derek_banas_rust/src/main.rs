@@ -3,7 +3,8 @@ use std::io::{self, Read};
 use rand::Rng;
 use std::cmp::Ordering;
 fn main(){
-
+    let my_tuple : (u32,String,i8) =(466567,"Hello".to_string(),12);
+    println!(" First letter of tuple {}",my_tuple.0);
     // let arr_1 = [1,2,3,4,5,6,7,8,9];
     // let mut loop_idx : usize = 0;
     // loop {

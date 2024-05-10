@@ -4,18 +4,37 @@ use rand::Rng;
 use std::cmp::Ordering;
 fn main(){
 
-    let str_1 = String::from("H ds d adsnklcas msclsaka s d s a");
-    let mut vec : Vec<char> = str_1.chars().collect();
-    vec.sort();
-    for letter in &vec{
-        println!("{letter}");
+    enum Day {
+        Monday,
+        Tuesday,
+        Wednesday,
+        Thursday,
+        Friday,
+        Saturday,
+        Sunday
     }
-    vec.dedup();
+    impl Day {
+        fn is_weekend(&self ) -> bool{
+            match self{
+                Day::Saturday |  Day::Sunday =>true,
+                _ => false
+            }
+        }
+    }
+    let today:Day = Day::Sunday;
+    println!("is weekend ? . {}",today.is_weekend());
+    // let str_1 = String::from("H ds d adsnklcas msclsaka s d s a");
+    // let mut vec : Vec<char> = str_1.chars().collect();
+    // vec.sort();
+    // for letter in &vec{
+    //     println!("{letter}");
+    // }
+    // vec.dedup();
 
-    for byte in str_1.bytes()
-    {
-        println!("{byte}");
-    }
+    // for byte in str_1.bytes()
+    // {
+    //     println!("{byte}");
+    // }
 
     // for letter in &vec{
     //     println!("{letter}")

@@ -2,7 +2,13 @@
 use std::io::{self, Read};
 use rand::Rng;
 use std::cmp::Ordering;
+
+fn add_two_numbers(x: i32 , y:i32)
+{
+    println!("{x} + {y} = {}",x+y);
+}
 fn main(){
+    add_two_numbers(12, 234);
 
     enum Day {
         Monday,

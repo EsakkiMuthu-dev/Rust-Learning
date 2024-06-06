@@ -11,10 +11,11 @@ pub fn run()
         println!("Press 2  to convert from faranheit to celsisus");
         let mut option =  get_user_input(" Choose one of the option: ").trim().parse::<u8>();
 
-       let option = match option{
+      match option{
                     Ok(1) => {
-                        let result = convert_c_to_f();
-                        println!(" {:.2} f",result);
+                        if let Some(result) = convert_c_to_f(){
+                            println!("{:.2} f",result)
+                        }
                     } ,
                     Ok(2) =>{
                         let result = convert_f_to_c();
@@ -35,10 +36,16 @@ pub fn run()
 }
 
 // convert celisus to faranheit
-fn convert_c_to_f() -> f32{
+fn convert_c_to_f() -> Option<f32>{
     let mut celsisus = get_user_input("\n Enter  the value of celesisus: ").trim().parse::<f32>();
-    let celsisus = celsisus.expect("Invalid input for celsius");
-    ((celsisus * 9.0)/5.0 )+32.0
+    match celsisus {
+       Ok(n) => Some((n * 9.0 / 5.0) + 32.0),
+       Err(_) => {
+           println!(" Invalid user input for celsius \n");
+           None
+       }
+   }
+
 }
 
 // convert faranheit to celsisus

@@ -7,22 +7,22 @@ pub fn run()
         println!();
         println!(" Happy to help you using rust!🦀");
         println!("Options: ");
-        println!("Press 1  to convert from celsius to faranheit");
-        println!("Press 2  to convert from faranheit to celsisus");
+        println!("Press 1  to convert from celsius to faranheit  ");
+        println!("Press 2  to convert from faranheit to celsisus ");
         let mut option =  get_user_input(" Choose one of the option: ").trim().parse::<u8>();
 
       match option{
                     Ok(1) => {
                         if let Some(result) = convert_c_to_f(){
-                            println!("{:.2} f",result)
+                            println!("{:.2} `f .",result)
                         }
                     } ,
                     Ok(2) =>{
                         let result = convert_f_to_c();
-                        println!("{:.2} c",result);
+                        println!("{:.2} `c .",result);
                     }
                     _ =>{
-                        println!("Invalid Option\n");
+                        println!("Invalid Option  \n ");
                         continue
                     }
        };

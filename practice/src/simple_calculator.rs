@@ -1,9 +1,9 @@
-use std::fmt::Error;
+use std::fmt::{Error, format};
 use std::io::ErrorKind;
 use std::io::ErrorKind::InvalidData;
 use log::error;
 use crate::helper;
-use crate::helper::get_user_input;
+use crate::helper::{get_numbers, get_user_input};
 
 // use crate
 pub fn run(){
@@ -22,10 +22,10 @@ pub fn run(){
 
         match option{
             Ok(1..=4) => match  handle_operation(option.unwrap())  {
-                Ok(n) => println!("<--------------->"),
+                Ok(n) => println!("Result : {n}"),
                 Err(e) => { println!(" Oops🤨 you got this Error 🔴  {e}"); continue}
             },
-            _ => println!("Oops!!🙊🙊  Invalid Input \n");
+            _ => println!("Oops!!🙊🙊  Invalid Input \n")
         }
 
         let mut is_continue = get_user_input("Can we Continue (Y) or press any key to quit");
@@ -47,20 +47,67 @@ fn handle_operation(option:u8) -> Result<i32 ,ErrorKind>{
     }
 }
 
-
+fn get_numbers_for_operation(operation: &str) -> Option<Vec<i32>>{
+    println!();
+    let numbers = helper::get_number( format!(" How many numbers you want to perform for {operation} : ").as_str());
+    match numbers {
+        Some(n) => get_numbers(n),
+        None => None
+    }
+}
 
 pub fn handle_addtion() -> Result<i32,ErrorKind>{
-      todo!()
+    let numbers = get_numbers_for_operation("Addition");
+    match numbers {
+        Some(numbers) => {
+            let mut sum = 0;
+            for i in numbers{
+                sum+=i;
+            }
+            Ok(sum)
+        },
+        None => Err(InvalidData)
+    }
 
 }
 
 pub fn handle_subtraction() ->Result<i32,ErrorKind>{
-    todo!()
+    let numbers = get_numbers_for_operation(" subtraction");
+    match numbers {
+        Some(numbers) => {
+            let mut sub = 0;
+            for i in numbers{
+                sub -=i;
+            }
+            Ok(sub)
+        },
+        None => Err(InvalidData)
+    }
 }
 pub fn handle_multiplication() -> Result<i32,ErrorKind>{
-    todo!()
+    let numbers = get_numbers_for_operation(" subtraction");
+    match numbers {
+        Some(numbers) => {
+            let mut mul = 0;
+            for i in numbers{
+                mul *=i;
+            }
+            Ok(mul)
+        },
+        None => Err(InvalidData)
+    }
 }
 
 pub fn handle_division() -> Result<i32,ErrorKind>{
-    todo!()
+    let numbers = get_numbers_for_operation(" subtraction");
+    match numbers {
+        Some(numbers) => {
+            let mut div = 0;
+            for i in numbers{
+                div /=i;
+            }
+            Ok(div)
+        },
+        None => Err(InvalidData)
+    }
 }

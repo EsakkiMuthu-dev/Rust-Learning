@@ -5,5 +5,6 @@ mod helper;
 
 fn main() {
      // sum1::sum_using_iter();
-     termperature_converter::run();
+     // termperature_converter::run();
+     simple_calculator::run();
 }

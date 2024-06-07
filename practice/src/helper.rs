@@ -13,11 +13,11 @@ pub fn get_user_input(prompt : &str) -> String{
 
 pub fn get_numbers(numbers_count : i32) -> Option<Vec<i32>>{
     let mut numbers:Vec<i32> = Vec::new();
-    for i in 1..numbers_count{
+    for i in 1..=numbers_count{
        match get_number(format!("Enter the number {} : ",i).as_str()){
-            Ok(n) => numbers.push(n),
+            Some(n) => numbers.push(n),
             None => return None
-        }
+        };
     }
     Some(numbers)
 }

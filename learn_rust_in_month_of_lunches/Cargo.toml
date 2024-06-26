@@ -1,0 +1,6 @@
+[package]
+name = "learn_rust_in_month_of_lunches"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

@@ -1,3 +1,5 @@
+use std::char;
+
 fn main() {
    // let float = 12.0;
    // {
@@ -36,6 +38,10 @@ fn main() {
     let mut arr:[u8;5] = [0;5] ;
     arr[0] = 4;
     does_nothing();
+
+    let tuple = ("hey","hello",45,'5',vec![12,67]);
+    let(_,_,_,char_var,vec_var) = tuple;
+    println!("{char_var:?}, {vec_var:?}");
 
 }
 

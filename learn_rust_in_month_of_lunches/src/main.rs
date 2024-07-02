@@ -18,4 +18,29 @@ fn main() {
    mut_word.push_str("Some other String ".into());
    println!("My_number is {my_number}");
    println!(" My string changed to {word}");
+   println!("INside \t \\ \\\\Quotes
+   sopmwe
+   ajks");
+   println!(r#" inside \ posu \\\\\\"#);
+   println!("{:?}",b"This is something converted to binary");
+   let num = 20;
+   let num_ref = &num;
+   println!("{:p}",num_ref);
+
+   let father_name = "Esakki";
+   let son_name = "Esakki Muthu"; 
+   let family_name = "Esakki";
+   println!("This is {1} {2}, son of {0} {2}.",
+    father_name, son_name, family_name);
+
+    let mut arr:[u8;5] = [0;5] ;
+    arr[0] = 4;
+    does_nothing();
+
+}
+
+fn does_nothing() -> u8
+{
+   println!("This Method does Nothing");
+   78
 }

@@ -1,5 +1,5 @@
 use std::char;
-
+mod test_struct;
 fn main() {
    // let float = 12.0;
    // {
@@ -43,6 +43,7 @@ fn main() {
     let(_,_,_,char_var,vec_var) = tuple;
     println!("{char_var:?}, {vec_var:?}");
 
+    test_struct::test_struct();
 }
 
 fn does_nothing() -> u8

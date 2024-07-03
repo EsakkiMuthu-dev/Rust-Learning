@@ -15,6 +15,10 @@ struct Real{
     song:Song
 }
 
+enum  Something{
+    nothing,
+    anything
+}
 pub fn test_struct()
 {
     let some = SomeStruct;
@@ -22,4 +26,5 @@ pub fn test_struct()
     let no = SomeStruct;
     let real_struct: Real = Real{some_on:no,song};
     println!("{:?}",real_struct);
+
 }

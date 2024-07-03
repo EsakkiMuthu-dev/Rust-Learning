@@ -44,6 +44,7 @@ fn main() {
     println!("{char_var:?}, {vec_var:?}");
 
     test_struct::test_struct();
+    test_struct::casting_enum_as_int();
 }
 
 fn does_nothing() -> u8

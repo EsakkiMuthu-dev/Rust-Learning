@@ -1,5 +1,6 @@
 use std::char;
 mod test_struct;
+mod animal_enum;
 fn main() {
    // let float = 12.0;
    // {
@@ -45,6 +46,7 @@ fn main() {
 
     test_struct::test_struct();
     test_struct::casting_enum_as_int();
+   animal_enum::test_enum();
 }
 
 fn does_nothing() -> u8

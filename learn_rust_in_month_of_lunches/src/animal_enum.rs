@@ -52,5 +52,4 @@ pub fn test_enum()
     animal.check_animal_type();
     animal.change_to_cat();
     animal.check_animal_type();
-
 }

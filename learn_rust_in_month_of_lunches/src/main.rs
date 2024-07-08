@@ -1,6 +1,7 @@
 use std::char;
 mod test_struct;
 mod animal_enum;
+mod generics;
 fn main() {
    // let float = 12.0;
    // {
@@ -47,6 +48,10 @@ fn main() {
     test_struct::test_struct();
     test_struct::casting_enum_as_int();
    animal_enum::test_enum();
+   generics::test_generice_item(12);
+   generics::display_and_compare("Hey, !! ", "hey12", "zabc24");
+   let vec = vec![12,23,343,23,1,3,4,2];
+   println!("Sixth elemnt in this {vec:?} is : {:?}",generics::take_sixth_element_from_vec(&vec))
 }
 
 fn does_nothing() -> u8

@@ -2,6 +2,7 @@ mod test_struct;
 mod animal_enum;
 mod generics;
 mod hash_map;
+mod hash_set;
 fn main() {
    // let float = 12.0;
    // {
@@ -53,6 +54,7 @@ fn main() {
    let vec = vec![12,23,343,23,1,3,4,2];
    println!("Sixth elemnt in this {vec:?} is : {:?}",generics::take_sixth_element_from_vec(&vec));
    hash_map::create_t20_map();
+   hash_set::try_hashset();
 
 }
 

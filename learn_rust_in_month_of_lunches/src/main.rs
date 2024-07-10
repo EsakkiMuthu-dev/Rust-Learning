@@ -1,8 +1,11 @@
+use std::result;
+
 mod test_struct;
 mod animal_enum;
 mod generics;
 mod hash_map;
 mod hash_set;
+mod throw_question;
 fn main() {
    // let float = 12.0;
    // {
@@ -46,8 +49,8 @@ fn main() {
     let(_,_,_,char_var,vec_var) = tuple;
     println!("{char_var:?}, {vec_var:?}");
 
-    test_struct::test_struct();
-    test_struct::casting_enum_as_int();
+   test_struct::test_struct();
+   test_struct::casting_enum_as_int();
    animal_enum::test_enum();
    generics::test_generice_item(12);
    generics::display_and_compare("Hey, !! ", "hey12", "zabc24");
@@ -55,6 +58,11 @@ fn main() {
    println!("Sixth elemnt in this {vec:?} is : {:?}",generics::take_sixth_element_from_vec(&vec));
    hash_map::create_t20_map();
    hash_set::try_hashset();
+   let v = vec!["1", "hello","Deven","8"];
+   for n in v{
+      let result = throw_question::parse_and_log(n);
+      println!(" Result : {result:?}");
+   }
 
 }
 

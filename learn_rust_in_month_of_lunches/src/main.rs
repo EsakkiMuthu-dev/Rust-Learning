@@ -6,6 +6,7 @@ mod generics;
 mod hash_map;
 mod hash_set;
 mod throw_question;
+mod trait_example;
 fn main() {
    // let float = 12.0;
    // {
@@ -63,6 +64,7 @@ fn main() {
       let result = throw_question::parse_and_log(n);
       println!(" Result : {result:?}");
    }
+   trait_example::test_trait();
 
 }
 

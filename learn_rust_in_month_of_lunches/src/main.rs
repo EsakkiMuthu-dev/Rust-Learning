@@ -7,6 +7,7 @@ mod hash_map;
 mod hash_set;
 mod throw_question;
 mod trait_example;
+mod iterator;
 fn main() {
    // let float = 12.0;
    // {
@@ -65,6 +66,7 @@ fn main() {
       println!(" Result : {result:?}");
    }
    trait_example::test_trait();
+   iterator::test_iterator();
 
 }
 

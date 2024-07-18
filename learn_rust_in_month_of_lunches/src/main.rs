@@ -1,5 +1,3 @@
-use std::result;
-
 mod test_struct;
 mod animal_enum;
 mod generics;
@@ -8,6 +6,7 @@ mod hash_set;
 mod throw_question;
 mod trait_example;
 mod iterator;
+mod closures;
 fn main() {
    // let float = 12.0;
    // {
@@ -67,6 +66,7 @@ fn main() {
    }
    trait_example::test_trait();
    iterator::test_iterator();
+   closures::test_closures();
 
 }
 

@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 pub fn test_closures(){
     let lambda = |x:i32| println!("{x}");
     lambda(12);
@@ -30,4 +32,8 @@ pub fn test_closures(){
     for(index,num) in numbers.char_indices(){
         println!(" index {index} , value {num} {index}\t h ");
     }
+
+    let keys = vec![1,2,3,4,5];
+    let values = vec!["hello","hey","hoii","some"];
+    let nmap : HashMap<i32,&str> = keys.into_iter().zip(values.into_iter()).collect();
 }

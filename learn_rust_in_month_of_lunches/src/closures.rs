@@ -35,5 +35,6 @@ pub fn test_closures(){
 
     let keys = vec![1,2,3,4,5];
     let values = vec!["hello","hey","hoii","some"];
-    let nmap : HashMap<i32,&str> = keys.into_iter().zip(values.into_iter()).collect();
+    let nmap : HashMap<i32,&str> =  dbg!(keys.into_iter().zip(values.into_iter()).collect());
+
 }

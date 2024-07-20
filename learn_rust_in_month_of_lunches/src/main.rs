@@ -7,6 +7,7 @@ mod throw_question;
 mod trait_example;
 mod iterator;
 mod closures;
+mod map_method;
 fn main() {
    // let float = 12.0;
    // {
@@ -67,6 +68,7 @@ fn main() {
    trait_example::test_trait();
    iterator::test_iterator();
    closures::test_closures();
+   map_method::test_map_method();
 
 }
 

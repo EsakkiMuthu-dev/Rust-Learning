@@ -8,6 +8,8 @@ mod trait_example;
 mod iterator;
 mod closures;
 mod map_method;
+mod life_time;
+mod cell;
 fn main() {
    // let float = 12.0;
    // {
@@ -69,6 +71,11 @@ fn main() {
    iterator::test_iterator();
    closures::test_closures();
    map_method::test_map_method();
+   println!("{}",life_time::print_str());
+   cell::test_cell();
+   cell::test_ref_Cell();
+   // cell::test_deadLock_mutex();
+   // cell::test_deadLock_rwlock();
 
 }
 

@@ -81,6 +81,7 @@ fn main() {
 
 fn does_nothing() -> u8
 {
+
    println!("This Method does Nothing");
    78
 }

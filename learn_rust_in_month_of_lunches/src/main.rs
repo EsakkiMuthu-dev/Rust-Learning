@@ -10,6 +10,7 @@ mod closures;
 mod map_method;
 mod life_time;
 mod cell;
+mod cow;
 fn main() {
    // let float = 12.0;
    // {
@@ -76,6 +77,7 @@ fn main() {
    cell::test_ref_Cell();
    // cell::test_deadLock_mutex();
    // cell::test_deadLock_rwlock();
+   cow::test_cow();
 
 }
 

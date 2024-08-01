@@ -11,6 +11,7 @@ mod map_method;
 mod life_time;
 mod cell;
 mod cow;
+mod rc_exmaple;
 fn main() {
    // let float = 12.0;
    // {
@@ -78,7 +79,7 @@ fn main() {
    // cell::test_deadLock_mutex();
    // cell::test_deadLock_rwlock();
    cow::test_cow();
-
+   rc_exmaple::test_city();
 }
 
 fn does_nothing() -> u8

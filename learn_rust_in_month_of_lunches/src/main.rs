@@ -12,6 +12,7 @@ mod life_time;
 mod cell;
 mod cow;
 mod rc_exmaple;
+mod threads;
 fn main() {
    // let float = 12.0;
    // {
@@ -80,6 +81,18 @@ fn main() {
    // cell::test_deadLock_rwlock();
    cow::test_cow();
    rc_exmaple::test_city();
+
+   std::thread::spawn(||{
+      println!(" I am A thread pringintg on console! from main!!");
+   });
+   threads::test_thread();
+   threads::test_fn();
+   threads::test_fn_mut();
+   threads::test_fn_once();
+   closures::test_fnonce();
+   closures::test_fn();
+
+   closures::test_closures_as_args();
 }
 
 fn does_nothing() -> u8

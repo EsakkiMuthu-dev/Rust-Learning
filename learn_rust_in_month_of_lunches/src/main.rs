@@ -14,6 +14,8 @@ mod cow;
 mod rc_exmaple;
 mod threads;
 mod arc;
+mod scoped_threads;
+mod channel;
 fn main() {
    // let float = 12.0;
    // {
@@ -96,6 +98,10 @@ fn main() {
    closures::test_closures_as_args();
    arc::test_arc_with_two_threads();
    arc::test_arc_with_multiple_threads();
+   scoped_threads::test_scoped_thread();
+   scoped_threads::test_scoped_thread_with_multiples();
+   channel::test_channel();
+   channel::test_channel_with_threads();
 }
 
 fn does_nothing() -> u8

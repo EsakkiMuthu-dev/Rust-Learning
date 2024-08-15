@@ -13,6 +13,7 @@ mod cell;
 mod cow;
 mod rc_exmaple;
 mod threads;
+mod arc;
 fn main() {
    // let float = 12.0;
    // {
@@ -93,6 +94,8 @@ fn main() {
    closures::test_fn();
 
    closures::test_closures_as_args();
+   arc::test_arc_with_two_threads();
+   arc::test_arc_with_multiple_threads();
 }
 
 fn does_nothing() -> u8

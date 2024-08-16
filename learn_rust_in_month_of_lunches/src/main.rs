@@ -19,6 +19,8 @@ mod channel;
 mod demo_mod;
 use demo_mod::print_bharathi::Bharathi;
 mod calc;
+mod builder_pattern;
+mod deref_test;
 mod test;
 fn main() {
    // let float = 12.0;
@@ -110,6 +112,7 @@ fn main() {
    bharu.print_mine();
    demo_mod::country::state::city::print_city("India", 
    "Tamil Nadu", "MelaSevaL");
+   deref_test::test_deref_and_deref_mut();
 }
 
 fn does_nothing() -> u8

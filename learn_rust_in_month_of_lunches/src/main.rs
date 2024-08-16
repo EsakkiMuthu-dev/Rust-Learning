@@ -16,6 +16,10 @@ mod threads;
 mod arc;
 mod scoped_threads;
 mod channel;
+mod demo_mod;
+use demo_mod::print_bharathi::Bharathi;
+mod calc;
+mod test;
 fn main() {
    // let float = 12.0;
    // {
@@ -101,7 +105,11 @@ fn main() {
    scoped_threads::test_scoped_thread();
    scoped_threads::test_scoped_thread_with_multiples();
    channel::test_channel();
-   channel::test_channel_with_threads();
+   // channel::test_channel_with_threads();
+   let bharu = Bharathi::new(12);
+   bharu.print_mine();
+   demo_mod::country::state::city::print_city("India", 
+   "Tamil Nadu", "MelaSevaL");
 }
 
 fn does_nothing() -> u8

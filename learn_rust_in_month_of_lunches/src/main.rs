@@ -21,6 +21,7 @@ use demo_mod::print_bharathi::Bharathi;
 mod calc;
 mod builder_pattern;
 mod deref_test;
+mod serde;
 mod test;
 fn main() {
    // let float = 12.0;
@@ -113,6 +114,7 @@ fn main() {
    demo_mod::country::state::city::print_city("India", 
    "Tamil Nadu", "MelaSevaL");
    deref_test::test_deref_and_deref_mut();
+   serde::test_serde();
 }
 
 fn does_nothing() -> u8

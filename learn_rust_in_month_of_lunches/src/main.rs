@@ -25,6 +25,7 @@ mod serde;
 mod chrono;
 mod rayon_test;
 mod user_input;
+mod test_file;
 mod test;
 fn main() {
    // let float = 12.0;
@@ -119,7 +120,11 @@ fn main() {
    deref_test::test_deref_and_deref_mut();
    serde::test_serde();
    // chrono::test_chrono();
-   rayon_test::test_rayon();
+   // rayon_test::test_rayon();
+   // user_input::test_user_input();
+   user_input::test_env_vars();
+   test_file::test_file();
+
 }
 
 fn does_nothing() -> u8

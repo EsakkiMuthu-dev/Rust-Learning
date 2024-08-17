@@ -24,6 +24,7 @@ mod deref_test;
 mod serde;
 mod chrono;
 mod rayon_test;
+mod user_input;
 mod test;
 fn main() {
    // let float = 12.0;

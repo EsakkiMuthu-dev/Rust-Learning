@@ -22,6 +22,8 @@ mod calc;
 mod builder_pattern;
 mod deref_test;
 mod serde;
+mod chrono;
+mod rayon_test;
 mod test;
 fn main() {
    // let float = 12.0;
@@ -115,6 +117,8 @@ fn main() {
    "Tamil Nadu", "MelaSevaL");
    deref_test::test_deref_and_deref_mut();
    serde::test_serde();
+   // chrono::test_chrono();
+   rayon_test::test_rayon();
 }
 
 fn does_nothing() -> u8

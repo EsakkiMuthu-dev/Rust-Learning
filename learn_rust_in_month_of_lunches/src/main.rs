@@ -27,6 +27,7 @@ mod rayon_test;
 mod user_input;
 mod test_file;
 mod reqwest;
+mod into_tes;
 mod test;
 #[tokio::main]
 async fn main() {
@@ -128,8 +129,8 @@ async fn main() {
    test_file::test_file();
    reqwest::test_reqwest();
    let num = reqwest::gives_two().await;
-   println!("{num}")
-
+   println!("{num}");
+   into_tes::test_into();
 }
 
 fn does_nothing() -> u8

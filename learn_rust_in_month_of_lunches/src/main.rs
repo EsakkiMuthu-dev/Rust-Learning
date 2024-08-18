@@ -26,8 +26,10 @@ mod chrono;
 mod rayon_test;
 mod user_input;
 mod test_file;
+mod reqwest;
 mod test;
-fn main() {
+#[tokio::main]
+async fn main() {
    // let float = 12.0;
    // {
    //  let float_two = 34.0;
@@ -124,6 +126,9 @@ fn main() {
    // user_input::test_user_input();
    user_input::test_env_vars();
    test_file::test_file();
+   reqwest::test_reqwest();
+   let num = reqwest::gives_two().await;
+   println!("{num}")
 
 }
 

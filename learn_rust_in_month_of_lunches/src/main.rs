@@ -18,6 +18,7 @@ mod scoped_threads;
 mod channel;
 mod demo_mod;
 use demo_mod::print_bharathi::Bharathi;
+use rayon::array;
 mod calc;
 mod builder_pattern;
 mod deref_test;
@@ -130,6 +131,8 @@ async fn main() {
    reqwest::test_reqwest();
    let num = reqwest::gives_two().await;
    println!("{num}");
+   let sum :[usize;6] = std::array::from_fn(|i| i+i);
+   println!("Crated an arrray From from_fn method {sum:?}");
    into_tes::test_into();
 }
 

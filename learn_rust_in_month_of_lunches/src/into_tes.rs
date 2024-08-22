@@ -24,4 +24,5 @@ pub fn test_into(){
     println!("{:?}",demo);
     demo.change_value("Hello".to_string());
     println!("{:#?}",demo);
+    dbg!(vec![1,2,4]);
 }

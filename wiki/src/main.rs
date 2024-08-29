@@ -32,10 +32,10 @@ struct App{
 impl  App{
     fn get_article(&mut self)-> Result<(),AppError>{
         let data = get(format!("{URL}/{}",self.user_input))?;
+        self.user_input.clear();
         let text = data.text()?;
         self.current_summary = serde_json::from_str(&text)?;
         println!("{self}");
-        self.user_input.clear();
         Ok(())
     }
 }

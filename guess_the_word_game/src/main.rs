@@ -81,6 +81,7 @@ impl GameApp{
                 }
             }
         }
+        self.print_results();
 
     }
 
